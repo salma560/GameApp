@@ -3,29 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game Reviews</title>
+  <meta name="description" content="Browse and review free-to-play games across MMORPG, shooter, sailing, and more." />
+  <title>GameVault — Free-to-Play Game Reviews</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark px-3">
-    <span class="navbar-brand mb-0 h1">🎮 Game Reviews</span>
-    <div class="d-flex gap-2 genre-buttons">
-      <button class="btn btn-outline-light btn-sm" data-genre="mmorpg">MMORPG</button>
-      <button class="btn btn-outline-light btn-sm" data-genre="shooter">Shooter</button>
-      <button class="btn btn-outline-light btn-sm" data-genre="sailing">Sailing</button>
-      <button class="btn btn-outline-light btn-sm" data-genre="permadeath">Permadeath</button>
-      <button class="btn btn-outline-light btn-sm" data-genre="superhero">Superhero</button>
-      <button class="btn btn-outline-light btn-sm" data-genre="pixel">Pixel</button>
-    </div>
-  </nav>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="#">
+          <span class="brand-mark">GV</span>
+          GameVault
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="genre-buttons ms-lg-auto d-flex flex-wrap gap-2 justify-content-center justify-content-lg-end">
+            <button class="btn btn-genre active" data-genre="">All</button>
+            <button class="btn btn-genre" data-genre="mmorpg">MMORPG</button>
+            <button class="btn btn-genre" data-genre="shooter">Shooter</button>
+            <button class="btn btn-genre" data-genre="sailing">Sailing</button>
+            <button class="btn btn-genre" data-genre="permadeath">Permadeath</button>
+            <button class="btn btn-genre" data-genre="superhero">Superhero</button>
+            <button class="btn btn-genre" data-genre="pixel">Pixel</button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-  <main class="container my-4">
+    <section class="hero">
+      <div class="container">
+        <p class="hero-eyebrow">Free-to-Play Database</p>
+        <h1 class="hero-title">Discover your next game</h1>
+        <p class="hero-subtitle">Curated reviews and details for hundreds of free-to-play titles. Filter by genre and explore in-depth information.</p>
+      </div>
+    </section>
+  </header>
+
+  <main class="container my-5">
+    <div id="status-bar" class="status-bar d-none" role="status" aria-live="polite"></div>
+
     <section id="games-section" class="row g-4"></section>
-    <section id="details-section" class="d-none"></section>
+
+    <section id="details-section" class="d-none">
+      <button class="btn btn-back" type="button" aria-label="Back to game list">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
+        Back to catalog
+      </button>
+      <div id="details-content"></div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <p>GameVault &mdash; Powered by the Free-to-Play Games Database API</p>
+      <p class="footer-note">For educational purposes. Game data and images belong to their respective publishers.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
