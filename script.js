@@ -77,7 +77,7 @@ class UI {
     const section = document.getElementById("details-section");
     const content = document.getElementById("details-content");
     section.classList.remove("d-none");
-
+//hello
     content.innerHTML = `
       <div class="details-layout">
         <img src="${data.thumbnail}" class="details-img" alt="${data.title}" />
